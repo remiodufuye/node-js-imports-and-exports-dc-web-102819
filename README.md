@@ -67,7 +67,7 @@ Notice any differences between the call to `require` here and the call to `requi
 
 Node.js's `require` has a few tricks up its sleeve for finding modules. When it's called, it first checks whether its argument is a relative path or not. If it's _not_ a relative path — as in `require('util')` above — then Node.js looks for a `node_modules` folder, starting in the current directory and working through parent directories in order. If it find such a folder (we'll talk more about this folder in the next lesson), and if that folder contains a module by the given name, then we're done and we get that module.
 
-If Node.js strikes out on this hunt (it will look all the way up the chain to globally installed modules), then it searches its standard library. In the case of `'util'`, it find the module that we're looking for there.
+If Node.js strikes out on this hunt (it will look all the way up the chain to globally installed modules), then it searches its standard library. In the case of `'util'`, it will find the module that we're looking for there.
 
 If the argument to `require` _is_ a relative path (as is the case with `./lib/interface`), then Node.js will only check that location. If it finds a module there, great! It evaluates the module's code and returns its exports; if not, it throws an error.
 

@@ -1,5 +1,4 @@
-Node.js Imports and Exports
----
+# Node.js Imports and Exports
 
 ## Overview
 
@@ -105,7 +104,7 @@ try {
 } catch (error) {
   console.error(`Unable to inspect module ${moduleName}.`);
   console.error(`Reason: ${error.message}`);
-  exit(1);
+  process.exitCode = 1;
 }
 ```
 
